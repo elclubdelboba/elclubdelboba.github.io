@@ -191,7 +191,7 @@ body{
     display: grid;
     place-items: center;
     text-align: center;
-    height: 150px;
+    height: auto;
     margin-top: 150px;
     outline: 10px solid #ffffff;
     color: black;
