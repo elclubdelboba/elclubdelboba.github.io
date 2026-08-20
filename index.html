@@ -5,14 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EL CLUB DEL BOBA</title>
 </head>
+
 <body>
+    <button id="boton-barra">☰</button>
+
+    <div id="barra-lateral" class="barra-lateral">
+        <div>
+        <h2>MENÚ</h2>
+            <a class="enlace" href="#bloque1"><b>CLÁSICOS</b></a>
+            <a class="enlace" href="#bloque2"><b>PUROS</b></a>
+            <a class="enlace" href="#bloque3"><b>EXÓTICOS</b></a>
+            <a class="enlace especial" href="#bloque4"><b>MAJESTUOSOS</b></a>
+            <a class="enlace especial" href="#bloque5"><b>PINK POP</b></a>
+        </div>
+        <div>
+            <h3>PEDIDOS AQUÍ</h3>
+            <a class="enlace whatsapp" href="https://wa.me/+595982092589"><b>WHATSAPP</b></a>
+        </div>
+    </div>
+
     <header class="titulo">
-        <h1>EL CLUB DEL BOBA</h1>
+        <h1 class="up">BIENVENIDOS</h1>
+        <img class="up" src="/assets/elclubdelbobalogo.png " alt="">
+        <h1 class="up">AL CLUB</h1>
     </header>
 
     <main class = "menu">
 
-        <div class="contenedor">
+        <div class="contenedor" id="bloque1">
 
             <div class = "bloque">
 
@@ -39,7 +59,7 @@
             </div>
         </div>
 
-        <div class="contenedor">
+        <div class="contenedor" id="bloque2">
 
             <div class = "bloque">
 
@@ -61,7 +81,7 @@
             </div>
         </div>
 
-        <div class="contenedor">
+        <div class="contenedor" id="bloque3">
 
             <div class = "bloque">
 
@@ -93,7 +113,7 @@
             </div>
         </div>
 
-        <div class="contenedor majestuoso">
+        <div class="contenedor majestuoso" id="bloque4">
 
             <div class = "bloque">
 
@@ -120,7 +140,37 @@
             </div>
         </div>
 
+        <div class="contenedor majestuoso" id="bloque5">
+
+                <div class = "bloque">
+
+                <span class="cabeza majestuoso-cabeza">
+                    <h1>PINK POP <br> <span class="subT"> EL ORIGINAL DEL CLUB ¡HECHO PARA TODOS! <span> </br> </h1>
+                </span>
+
+                <span class="cuadro majestuoso-cuadro">
+                    <h2 class="item">BOBA PINK POP</h2>
+                    <h1 class="item item-largo">10.000 ₲</h1>
+                    <p class="item">Desde El CLUB DEL BOBA creamos este sabor para que sea agradable para todos los paladares.<br>¡A precio de recreo! 
+                    <br> Con leche (con o sin lactosa) fría avainillada coloreada de rosa y el boba que todos aman.</p>
+                </span>
+
+            </div>
+        </div>
     </main>
+
+    <footer>
+        <div class="footer">
+            <b>Somos la única tienda de Bubble Tea y sus deliciosas variantes en la ciudad de Itá y en más de 30km a la redonda.
+            <br> Y el único del país en hacerlo de forma artesanal sin químicos agregados. Respetando la receta original de Taiwán.
+            <br>
+            <br> ¡BIENVENIDOS AL CLUB!
+            </b>
+            <p>© 2026 EL CLUB DEL BOBA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
 </body>
 <link rel="stylesheet" href="style.css">
+<script src="logic.js"></script>
 </html>
