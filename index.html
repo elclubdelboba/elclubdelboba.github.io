@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="todo" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
     <div id="barra-lateral" class="barra-lateral">
         <div>
         <h2>MENÚ</h2>
-            <a class="enlace" href="#bloque1"><b>CLÁSICOS</b></a>
+            <a class="enlace btn-subir" href="#bloque1"><b>CLÁSICOS</b></a>
             <a class="enlace" href="#bloque2"><b>PUROS</b></a>
             <a class="enlace" href="#bloque3"><b>EXÓTICOS</b></a>
             <a class="enlace especial" href="#bloque4"><b>MAJESTUOSOS</b></a>
@@ -20,17 +20,17 @@
         </div>
         <div>
             <h3>PEDIDOS AQUÍ</h3>
-            <a class="enlace whatsapp" href="https://wa.me/+595982092589"><b>WHATSAPP</b></a>
+            <a class="enlace whatsapp" href="https://wa.me/+595982092589?text=¡Hola! Me gustaría comprar"><b>WHATSAPP</b></a>
+            <h3>SÍGUENOS</h3>
+            <a class="enlace ig" href="https://www.instagram.com/elclubdelboba"><b>INSTAGRAM</b></a>
         </div>
     </div>
 
-    <header class="titulo">
-        <h1 class="up">BIENVENIDOS</h1>
-        <img class="up" src="/assets/elclubdelbobalogo.png " alt="">
-        <h1 class="up">AL CLUB</h1>
+    <header class="titulo carga" id="logo">
+        <img id="imgLogo" class="logo carga" src="/assets/elclubdelbobalogo.png " alt="">
     </header>
 
-    <main class = "menu">
+    <main id="menu" class = "menu mini">
 
         <div class="contenedor" id="bloque1">
 
@@ -161,10 +161,8 @@
 
     <footer>
         <div class="footer">
-            <p>Somos la única tienda de Bubble Tea y sus deliciosas variantes en la ciudad de Itá y en más de 30km a la redonda.
-            <br> Y el único del país en hacerlo de forma artesanal sin químicos agregados. Respetando la receta original de Taiwán.
-            <br>
-            <br> <b>¡BIENVENIDOS AL CLUB!</b>
+            <p>
+                <b>¡BIENVENIDOS AL CLUB!</b>
             <br>
             <br>
             © 2026 EL CLUB DEL BOBA. Todos los derechos reservados.
