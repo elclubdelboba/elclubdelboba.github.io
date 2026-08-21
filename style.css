@@ -209,6 +209,27 @@ main{
     margin: 0px;
 }
 
+.marco{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    max-height: 500px;
+    border-bottom: 2px solid white;
+}
+
+.marco.especial{
+    border-bottom: 2px solid var(--rosado);
+}
+
+.foto{
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+}
+
 .majestuoso-cabeza{
     color: #ffffff;
     background-color: var(--rosado);
