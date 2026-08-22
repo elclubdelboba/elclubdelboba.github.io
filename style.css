@@ -82,15 +82,15 @@ main{
     background-color:var(--what);
     text-align: center;
     color: rgb(255, 255, 255);
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
     font-size: x-large;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     z-index: 5;
     border: 2px solid #ffffff;
-    margin: 40px;
+    margin: 0 30px 60px 0;
     bottom: 0;
     right: 0;
 }
