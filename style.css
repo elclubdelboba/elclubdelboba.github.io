@@ -100,9 +100,9 @@ body{
     opacity: .7;
 }
 
-
 .barra-lateral {
     position: fixed;
+    padding-top: 50px;
     top: 0;
     left: 0;
     width: 50%;
@@ -116,7 +116,7 @@ body{
 }
 
 .barra-lateral.activo {
-  transform: translateX(0%);
+    transform: translateX(0%);
 }
 
 .barra-lateral div {
