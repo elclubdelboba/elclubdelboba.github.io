@@ -1,196 +1,212 @@
 <!DOCTYPE html>
 <html id="todo" lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EL CLUB DEL BOBA</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EL CLUB DEL BOBA</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body>
-    <button id="boton-barra">☰</button>
+    <body class="montserrat-font">
+        <button id="boton-barra">☰</button>
 
-    <div id="barra-lateral" class="barra-lateral">
-        <div>
-        <h2>MENÚ</h2>
-            <a class="enlace btn-subir" href="#bloque1"><b>CLÁSICOS</b></a>
-            <a class="enlace" href="#bloque2"><b>PUROS</b></a>
-            <a class="enlace" href="#bloque3"><b>EXÓTICOS</b></a>
-            <a class="enlace especial" href="#bloque4"><b>MAJESTUOSOS</b></a>
-            <a class="enlace especial" href="#bloque5"><b>PINK POP</b></a>
-        </div>
-        <div>
-            <h3>PEDIDOS AQUÍ</h3>
-            <a class="enlace whatsapp" href="https://wa.me/+595982092589?text=¡Hola! Me gustaría comprar"><b>WHATSAPP</b></a>
-            <h3>SÍGUENOS</h3>
-            <a class="enlace ig" href="https://www.instagram.com/elclubdelboba"><b>INSTAGRAM</b></a>
-        </div>
-    </div>
+        <a id="boton-what" href="https://wa.me/+595982092589?text=¡Hola! Me gustaría comprar">✉</a>
 
-    <header class="titulo carga" id="logo">
-        <img id="imgLogo" class="logo carga" src="/assets/elclubdelbobalogo.png " alt="">
-    </header>
-
-    <main id="menu" class = "menu mini">
-
-        <div class="contenedor" id="bloque1">
-
-            <div class = "bloque">
-
-                <span class="cabeza">
-                    <h1>CLÁSICOS <br> <span class="subT"> LOS FAVORITOS DEL CLUB <span> </br> </h1>
-                </span>
-                
-                <span class="marco">
-                    <img class="foto" src="assets/coffee.png" alt="">
-                </span>
-
-                <span class="cuadro">
-                    <h2 class="item">BUBBLE TEA</h2>
-                    <h1 class="item item-largo">15.000 ₲</h1>
-                    <p class="item">El original de Taiwán, con té negro y leche cremosa bien fría</p>
-                </span>
-                <span class="cuadro">
-                    <h2 class="item">BUBBLE COFFEE MILK</h2>
-                    <h1 class="item item-largo">15.000 ₲</h1>
-                    <p class="item">Para los amates del buen café helado con leche cremosa</p>
-                </span>
-                <span class="cuadro">
-                    <h2 class="item">BUBBLE CHOCO MILK</h2>
-                    <h1 class="item item-largo">15.000 ₲</h1>
-                    <p class="item">Un bombón líquido refrescante con toques de canela</p>
-                </span>
-
+        <div id="barra-lateral" class="barra-lateral">
+            <div>
+            <h2>MENÚ</h2>
+                <a class="enlace btn-subir" href="#bloque1"><b>CLÁSICOS</b></a>
+                <a class="enlace" href="#bloque2"><b>PUROS</b></a>
+                <a class="enlace" href="#bloque3"><b>EXÓTICOS</b></a>
+                <a class="enlace especial" href="#bloque4"><b>MAJESTUOSOS</b></a>
+                <a class="enlace especial" href="#bloque5"><b>PINK POP</b></a>
+            </div>
+            <div>
+                <h3>PEDIDOS AQUÍ</h3>
+                <a class="enlace whatsapp" href="https://wa.me/+595982092589?text=¡Hola! Me gustaría comprar"><b>WHATSAPP</b></a>
+                <h3>SÍGUENOS</h3>
+                <a class="enlace ig" href="https://www.instagram.com/elclubdelboba"><b>INSTAGRAM</b></a>
             </div>
         </div>
 
-        <div class="contenedor" id="bloque2">
+        <header class="titulo carga" id="logo">
+            <img id="imgLogo" class="logo carga" src="/assets/elclubdelbobalogo.png " alt="">
+        </header>
 
-            <div class = "bloque">
+        <main id="menu" class = "menu mini">
 
-                <span class="cabeza">
-                    <h1>PUROS <br> <span class="subT"> LOS EXQUISITOS DEL CLUB <span> </br> </h1>
-                </span>
-
-                <span class="marco">
-                    <img class="foto" src="assets/dark.png" alt="">
-                </span>
-
-                <span class="cuadro">
-                    <h2 class="item">BUBBLE DARK TEA</h2>
-                    <h1 class="item item-largo">15.000 ₲</h1>
-                    <p class="item">La versión sin leche del clásico Bubble tea, té negro concentrado y helado</p>
-                </span>
-                <span class="cuadro">
-                    <h2 class="item">BUBBLE DARK COFFEE</h2>
-                    <h1 class="item item-largo">15.000 ₲</h1>
-                    <p class="item">Toda la fuerza del café estilo espresso helado de alta intensidad y sabor</p>
-                </span>
-
-            </div>
-        </div>
-
-        <div class="contenedor" id="bloque3">
-
-            <div class = "bloque">
-
-                <span class="cabeza">
-                    <h1>EXÓTICOS <br> <span class="subT"> LOS DISTINTOS DEL CLUB <span> </br> </h1>
-                </span>
-
-                <span class="marco">
-                    <img class="foto" src="assets/strawberry.jpg.png" alt="">
-                </span>
-
-                <span class="cuadro">
-                    <h2 class="item">BUBBLE STRAWBERRY MILK</h2>
-                    <h1 class="item item-largo">18.000 ₲</h1>
-                    <p class="item">Tropezones de frutillas en jarabe con cremosa leche helada</p>
-                </span>
-                <span class="cuadro">
-                    <h2 class="item">BUBBLE PEACH MILK</h2>
-                    <h1 class="item item-largo">18.000 ₲</h1>
-                    <p class="item">Tropezones de duraznos en jarabe con cremosa leche helada</p>
-                </span>
-                <span class="cuadro">
-                    <h2 class="item">BUBBLE CHOCO STRAWBERRY</h2>
-                    <h1 class="item item-largo">20.000 ₲</h1>
-                    <p class="item">Tropezones de frutillas en jarabe con chocolate en cremosa leche helada</p>
-                </span>
-                <span class="cuadro">
-                    <h2 class="item">BUBBLE BANANA MILK</h2>
-                    <h1 class="item item-largo">18.000 ₲</h1>
-                    <p class="item">Tropezones de bananas en cremosa leche helada</p>
-                </span>
-
-            </div>
-        </div>
-
-        <div class="contenedor majestuoso" id="bloque4">
-
-            <div class = "bloque">
-
-                <span class="cabeza majestuoso-cabeza">
-                    <h1>MAJESTUOSOS <br> <span class="subT"> LOS MÁS LUJOSOS DEL CLUB <span> </br> </h1>
-                </span>
-                
-                <span class="marco especial">
-                    <img class="foto" src="assets/brownsugar.jpg.png" alt="">
-                </span>
-
-                <span class="cuadro majestuoso-cuadro">
-                    <h2 class="item">BUBBLE COOKIE & CREAM OBSIDIAN</h2>
-                    <h1 class="item item-largo">25.000 ₲</h1>
-                    <p class="item">Elixir de Oreo y leche cremosa con chocolate</p>
-                </span>
-                <span class="cuadro majestuoso-cuadro">
-                    <h2 class="item">BUBBLE COOKIE & CREAM GOLD</h2>
-                    <h1 class="item item-largo">25.000 ₲</h1>
-                    <p class="item">Elixir de Golden Oreo y leche cremosa avainillada</p>
-                </span>
-                <span class="cuadro majestuoso-cuadro">
-                    <h2 class="item">BUBBLE BROWN SUGAR</h2>
-                    <h1 class="item item-largo">25.000 ₲</h1>
-                    <p class="item">El más famoso de Taiwán. Leche cremosa helada bañada en melaza dulce y espesa </p>
-                </span>
-
-            </div>
-        </div>
-
-        <div class="contenedor majestuoso" id="bloque5">
+            <div class="contenedor" id="bloque1">
 
                 <div class = "bloque">
 
-                <span class="cabeza majestuoso-cabeza">
-                    <h1>PINK POP <br> <span class="subT"> EL ORIGINAL DEL CLUB ¡HECHO PARA TODOS! <span> </br> </h1>
-                </span>
+                    <span class="cabeza">
+                        <h1>CLÁSICOS <br> <span class="subT"> LOS FAVORITOS DEL CLUB <span> </br> </h1>
+                    </span>
+                    
+                    <span class="marco">
+                        <img class="foto" src="assets/coffee.png" alt="">
+                    </span>
 
-                <span class="marco especial">
-                    <img class="foto" src="assets/pinkpop.png" alt="">
-                </span>
+                    <span class="cuadro">
+                        <h2 class="item">BUBBLE TEA</h2>
+                        <h1 class="item item-largo">15.000 ₲</h1>
+                        <p class="item">El original de Taiwán, con té negro y leche cremosa bien fría.</p>
+                    </span>
+                    <span class="cuadro">
+                        <h2 class="item">BUBBLE COFFEE MILK</h2>
+                        <h1 class="item item-largo">15.000 ₲</h1>
+                        <p class="item">Para los amates del buen café helado con leche cremosa.</p>
+                        <span class="sello best">
+                            <b>MÁS VENDIDO</b>
+                        </span>
+                    </span>
+                    <span class="cuadro">
+                        <h2 class="item">BUBBLE CHOCO MILK</h2>
+                        <h1 class="item item-largo">15.000 ₲</h1>
+                        <p class="item">Un bombón líquido refrescante con toques de canela.</p>
+                    </span>
 
-                <span class="cuadro majestuoso-cuadro">
-                    <h2 class="item">BOBA PINK POP</h2>
-                    <h1 class="item item-largo">10.000 ₲</h1>
-                    <p class="item">Desde El CLUB DEL BOBA creamos este sabor para que sea agradable para todos los paladares.<br>¡A precio de recreo! 
-                    <br> Con leche (con o sin lactosa) fría avainillada coloreada de rosa y el boba que todos aman.</p>
-                </span>
-
+                </div>
             </div>
-        </div>
-    </main>
 
-    <footer>
-        <div class="footer">
-            <p>
-                <b>¡BIENVENIDOS AL CLUB!</b>
-            <br>
-            <br>
-            © 2026 EL CLUB DEL BOBA. Todos los derechos reservados.
-            </p>
-        </div>
-    </footer>
+            <div class="contenedor" id="bloque2">
 
-</body>
-<link rel="stylesheet" href="style.css">
-<script src="logic.js"></script>
+                <div class = "bloque">
+
+                    <span class="cabeza">
+                        <h1>PUROS <br> <span class="subT"> LOS EXQUISITOS DEL CLUB <span> </br> </h1>
+                    </span>
+
+                    <span class="marco">
+                        <img class="foto" src="assets/dark.png" alt="">
+                    </span>
+
+                    <span class="cuadro">
+                        <h2 class="item">BUBBLE DARK TEA</h2>
+                        <h1 class="item item-largo">15.000 ₲</h1>
+                        <p class="item">La versión sin leche del clásico Bubble tea, té negro concentrado y helado.</p>
+                    </span>
+                    <span class="cuadro">
+                        <h2 class="item">BUBBLE DARK COFFEE</h2>
+                        <h1 class="item item-largo">15.000 ₲</h1>
+                        <p class="item">Toda la fuerza del café estilo espresso helado de alta intensidad y sabor.</p>
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="contenedor" id="bloque3">
+
+                <div class = "bloque">
+
+                    <span class="cabeza">
+                        <h1>EXÓTICOS <br> <span class="subT"> LOS DISTINTOS DEL CLUB <span> </br> </h1>
+                    </span>
+
+                    <span class="marco">
+                        <img class="foto" src="assets/strawberry.png" alt="">
+                    </span>
+
+                    <span class="cuadro">
+                        <h2 class="item">BUBBLE STRAWBERRY MILK</h2>
+                        <h1 class="item item-largo">18.000 ₲</h1>
+                        <p class="item">Tropezones de frutillas en jarabe con cremosa leche helada.</p>
+                    </span>
+                    <span class="cuadro">
+                        <h2 class="item">BUBBLE PEACH MILK</h2>
+                        <h1 class="item item-largo">18.000 ₲</h1>
+                        <p class="item">Tropezones de duraznos en jarabe con cremosa leche helada.</p>
+                    </span>
+                    <span class="cuadro">
+                        <h2 class="item">BUBBLE CHOCO STRAWBERRY</h2>
+                        <h1 class="item item-largo">20.000 ₲</h1>
+                        <p class="item">Tropezones de frutillas en jarabe con chocolate en cremosa leche helada.</p>
+                        <span class="sello new">
+                            <b>NEW</b>
+                        </span>
+                    </span>
+                    <span class="cuadro">
+                        <h2 class="item">BUBBLE BANANA MILK</h2>
+                        <h1 class="item item-largo">18.000 ₲</h1>
+                        <p class="item">Tropezones de bananas en cremosa leche helada.</p>
+                        <span class="sello new">
+                            <b>NEW</b>
+                        </span>
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="contenedor majestuoso" id="bloque4">
+
+                <div class = "bloque">
+
+                    <span class="cabeza majestuoso-cabeza">
+                        <h1>MAJESTUOSOS <br> <span class="subT"> LOS MÁS LUJOSOS DEL CLUB <span> </br> </h1>
+                    </span>
+                    
+                    <span class="marco especial">
+                        <img class="foto" src="assets/brownsugar.png" alt="">
+                    </span>
+
+                    <span class="cuadro majestuoso-cuadro">
+                        <h2 class="item">BUBBLE COOKIE & CREAM OBSIDIAN</h2>
+                        <h1 class="item item-largo">25.000 ₲</h1>
+                        <p class="item">Elixir de Oreo y leche cremosa con chocolate.</p>
+                    </span>
+                    <span class="cuadro majestuoso-cuadro">
+                        <h2 class="item">BUBBLE COOKIE & CREAM GOLD</h2>
+                        <h1 class="item item-largo">25.000 ₲</h1>
+                        <p class="item">Elixir de Golden Oreo y leche cremosa avainillada.</p>
+                    </span>
+                    <span class="cuadro majestuoso-cuadro">
+                        <h2 class="item">BUBBLE BROWN SUGAR</h2>
+                        <h1 class="item item-largo">25.000 ₲</h1>
+                        <p class="item">El más famoso de Taiwán. Leche cremosa helada bañada en melaza dulce y espesa.</p>
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="contenedor majestuoso" id="bloque5">
+
+                    <div class = "bloque">
+
+                    <span class="cabeza majestuoso-cabeza">
+                        <h1>PINK POP <br> <span class="subT"> EL ORIGINAL DEL CLUB ¡HECHO PARA TODOS! <span> </br> </h1>
+                    </span>
+
+                    <span class="marco especial">
+                        <img class="foto" src="assets/pinkpop.png" alt="">
+                    </span>
+
+                    <span class="cuadro majestuoso-cuadro">
+                        <h2 class="item">BOBA PINK POP</h2>
+                        <h1 class="item item-largo">10.000 ₲</h1>
+                        <p class="item">Desde El CLUB DEL BOBA creamos este sabor para que sea agradable para todos los paladares.<br>¡A precio de recreo! 
+                        <br> Con leche (con o sin lactosa) fría avainillada coloreada de rosa y el boba que todos aman.</p>
+                        <span class="sello new">
+                            <b>NEW</b>
+                        </span>
+                    </span>
+
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer">
+                <p>
+                    <b>¡BIENVENIDOS AL CLUB!</b>
+                <br>
+                <br>
+                © 2026 EL CLUB DEL BOBA. Todos los derechos reservados.
+                </p>
+            </div>
+        </footer>
+        <script src="logic.js"></script>
+    </body>
 </html>

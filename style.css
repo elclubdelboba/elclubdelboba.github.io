@@ -1,4 +1,16 @@
-@import url('https://googleapis.com');
+.montserrat-font {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.baloo-da-2-font {
+    font-family: "Baloo Da 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
 
 html{
     scroll-behavior: smooth;
@@ -24,6 +36,7 @@ html::-webkit-scrollbar {
 :root {
     --rosado:  rgb(255, 100, 200);
     --what:  #25D366;
+    --second: #EA63FF;
   }
 
 body{
@@ -54,13 +67,32 @@ main{
     width: 40px;
     font-size: x-large;
     border: none;
-    border-radius: 12px;
+    border-radius: 50px;
     cursor: pointer;
     z-index: 5;
     border: 2px solid #ffffff;
     margin: 10px;
     top: 0;
     left: 0;
+}
+
+#boton-what{
+    text-decoration: none;
+    position: fixed;
+    background-color:var(--what);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 40px;
+    font-size: x-large;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 5;
+    border: 2px solid #ffffff;
+    margin: 10px;
+    bottom: 0;
+    right: 0;
 }
 
 .barra-lateral {
@@ -246,6 +278,7 @@ main{
 
 .cuadro {
     display: grid;
+    position: relative;
     grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
     grid-template-rows: auto auto; /* Dos filas automáticas */
     column-width: 10px;
@@ -253,29 +286,57 @@ main{
     border-bottom: 2px solid white;
   }
 
-  .majestuoso-cuadro{
+.sello{
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: 8px double var(--second);
+    transform: rotate(-15deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.best{
+    color: black;
+    font-size: xx-small;
+    background-color: white;
+    border-radius: 50px;
+}
+
+.new{
+    color: white;
+    font-size: small;
+    background-color: black;
+    border-radius: 50px;
+}
+
+.majestuoso-cuadro{
     background-color: #ffffff;
     color: black;
     border-bottom: 2px solid var(--rosado);
-  }
+}
 
-  .cuadro .item:nth-child(1){
+.cuadro .item:nth-child(1){
     color: var(--rosado);
-  }
+}
 
-  .item{
+.item{
     display: grid;
     place-items: left;
-  }
-  
-  .item-largo{
+}
+
+.item-largo{
     grid-row: span 2;
     display: grid;
     place-items: center;
     justify-items: end;
-  }
+}
 
-  footer{
+footer{
     bottom: 0;
     display: grid;
     place-items: center;
@@ -285,4 +346,4 @@ main{
     outline: 10px solid #ffffff;
     color: black;
     background-color: white;
-  }
+}
