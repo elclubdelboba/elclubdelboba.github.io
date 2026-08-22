@@ -24,7 +24,7 @@ html{
     padding: 0%;
     margin: 0%;
     font-family: 'Montserrat', sans-serif;
-    scroll-padding-top: 70px;
+    scroll-padding-top: 60px;
 
     -ms-overflow-style: none; /* Internet Explorer / Edge antiguo */
 }
@@ -85,7 +85,6 @@ main{
     height: 60px;
     width: 60px;
     font-size: x-large;
-    border: none;
     border-radius: 50px;
     cursor: pointer;
     z-index: 5;
@@ -93,6 +92,10 @@ main{
     margin: 0 30px 60px 0;
     bottom: 0;
     right: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 .barra-lateral {
