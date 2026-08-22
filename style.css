@@ -25,7 +25,6 @@ html{
     margin: 0%;
     font-family: 'Montserrat', sans-serif;
     scroll-padding-top: 60px;
-
     -ms-overflow-style: none; /* Internet Explorer / Edge antiguo */
 }
 
@@ -40,15 +39,18 @@ html::-webkit-scrollbar {
   }
 
 body{
-    margin: 0px;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
 }
 
-main{
-    margin: 10px;
+.menu{
+    width: 100%;
 }
 
 .menu.mini{
-    margin-top: 70px;
+    margin-top: 60px;
 }
 
  .seccion {
@@ -58,56 +60,56 @@ main{
     box-sizing: border-box;
 }
 
-#boton-barra{
+.boton{
     position: fixed;
-    background-color:var(--rosado);
+    text-decoration: none;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 0;
+    z-index: 5;
+    border: 2px solid #ffffff;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.boton.barra{
+    background-color:var(--rosado);
     color: rgb(255, 255, 255);
     height: 40px;
     width: 40px;
     font-size: x-large;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    z-index: 5;
-    border: 2px solid #ffffff;
-    margin: 10px;
-    top: 0;
-    left: 0;
+    top: 10px;
+    left: 10px;
 }
 
-#boton-what{
-    text-decoration: none;
-    position: fixed;
-    background-color:var(--what);
-    text-align: center;
+.boton.what{
+    background-color: var(--what);
+    border-right: 0;
+    border-radius: 30px 0px 0px 30px;
     color: rgb(255, 255, 255);
     height: 60px;
     width: 60px;
-    font-size: x-large;
-    border-radius: 50px;
-    cursor: pointer;
-    z-index: 5;
-    border: 2px solid #ffffff;
-    margin: 0 30px 60px 0;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+    font-size: xx-large;
+    bottom: 10%;
+    right: 0px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    opacity: .7;
 }
+
 
 .barra-lateral {
     position: fixed;
     top: 0;
     left: 0;
-    width: 45%;
+    width: 50%;
     height: 100%;
     background-color:rgb(0, 0, 0);
     border-right: 2px solid white;
     color: white;
-    padding: 45px 10px 0 10px;
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
     z-index: 4;
@@ -115,6 +117,10 @@ main{
 
 .barra-lateral.activo {
   transform: translateX(0%);
+}
+
+.barra-lateral div {
+    margin: 10px;
 }
 
 .enlace{
@@ -211,15 +217,15 @@ main{
 }
 
 .contenedor{
+    width: auto;
+    height: auto;
     background-color: black;
-    top: 70px;
     margin-top: 40px;
-    outline: 10px solid #ffffff;
+    border: 10px solid #ffffff;
 }
 
 .majestuoso{
-    margin-top: 40px;
-    outline: 10px solid var(--rosado); 
+    border: 10px solid var(--rosado); 
 }
 
 .bloque{
@@ -281,18 +287,23 @@ main{
 
 .cuadro {
     display: grid;
+    align-content: center;
+    align-items: center;
+    justify-items: stretch;
     position: relative;
     grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
     grid-template-rows: auto auto; /* Dos filas automáticas */
     column-width: 10px;
     padding: 0px 10px 0px 10px;
     border-bottom: 2px solid white;
+    height: auto;
+    width: auto;
   }
 
 .sello{
     position: absolute;
     top: -8px;
-    right: -8px;
+    right: -3px;
     width: 50px;
     height: 50px;
     text-align: center;
@@ -344,9 +355,9 @@ footer{
     display: grid;
     place-items: center;
     text-align: center;
+    width: 100%;
     height: auto;
     margin-top: 150px;
-    outline: 10px solid #ffffff;
     color: black;
     background-color: white;
 }
