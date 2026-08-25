@@ -2,6 +2,8 @@ const botonBarra = document.getElementById("boton-barra");
 const barra = document.getElementById("barra-lateral");
 const menu = document.getElementById("menu");
 const head = document.getElementById("logo");
+const flechaR = document.getElementById("flechaR");
+const flechaL = document.getElementById("flechaL");
 var inicio =  true;
 var miniPermitido = true;
 var topp = true;
@@ -64,10 +66,11 @@ window.addEventListener('scroll', () => {
         logo.classList.add("mini");
         imgLogo.classList.add("mini");
         menu.classList.add("mini");
+
         if(topp  === true){
             document.documentElement.style.overflow = 'hidden';
             window.scrollTo({
-                top: 10,
+                top: 40
             });
             topp = false;
         }
@@ -77,16 +80,13 @@ window.addEventListener('scroll', () => {
     }
 });
 
-document.querySelector('.btn-subir').addEventListener('click', function(e) {
-    e.preventDefault();
+document.getElementById("btnSubir").addEventListener('click', function() {
     miniPermitido = false;
-    window.scrollTo({
-        top: 0, 
-        behavior: 'smooth'
-    });
+    document.documentElement.style.overflow = 'hidden';
     setTimeout(() => {
         miniPermitido = true;
-    }, 700); 
+        document.documentElement.style.overflow = 'visible';
+    }, 300); 
 });
 
 const elementos = document.querySelectorAll('.enlace');
@@ -103,5 +103,108 @@ elementos.forEach(boton => {
             });
             topp = false;
         }
+    });
+});
+
+//CARRUSEL-----------------------------------------------------------
+
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // 1. Tu base de datos organizada por categorías
+    const bancoImagenes = {
+        "CLÁSICOS": [
+            {src: "assets/choco.png", alt: "Choco Milk" },
+            {src: "assets/coffee.png", alt: "Coffee Boba" },
+            {src: "assets/choco2.png", alt: "Choco Milk 2" }
+        ],
+        "PUROS": [
+            {src: "assets/dark.png", alt: "Brown Sugar" },
+        ],
+        "EXÓTICOS": [
+            {src: "assets/peach.png", alt: "Peach Milk" },
+            {src: "assets/strawberry.png", alt: "Strawberry Milk" }
+        ],
+        "MAJESTUOSOS": [
+            {src: "assets/brownsugar.png", alt: "Strawberry Milk" },
+            {src: "assets/obsidian.png", alt: "Cookie & Cream" }
+        ],
+        "PINK POP": [
+            {src: "assets/pinkpop.png", alt: "Strawberry Milk" }
+        ]
+    };
+
+    // 2. Buscamos todas las secciones de categorías en la página
+    const contenedores = document.querySelectorAll(".contenedor");
+
+    contenedores.forEach((seccion) => {
+        const nombreCategoria = seccion.querySelector("h1").innerText;
+        const listaDatos = bancoImagenes[nombreCategoria];
+
+        if (!listaDatos) return;
+
+        const carrusel = seccion.querySelector(".carrusel");
+        const flechaL = seccion.querySelector(".L") !== null? seccion.querySelector(".L") : null;
+        const flechaR = seccion.querySelector(".R") !== null? seccion.querySelector(".R") : null;
+
+        listaDatos.forEach(datos => {
+            const img = document.createElement("img");
+            img.src = datos.src;
+            img.alt = datos.alt;
+            img.classList.add("foto");
+            carrusel.appendChild(img);
+        });
+
+        const fotos = Array.from(carrusel.querySelectorAll(".foto"));
+        const total = fotos.length;
+        let centro = null;
+
+        if(total > 1){
+            centro = 1;
+        }
+        else{
+           centro = 0; 
+        }
+        let rotarCarrusel = null;
+
+        function actualizarCarrusel() {
+            let izquierda = (centro - 1 + total) % total;
+            let derecha = (centro + 1) % total;
+
+            fotos.forEach((foto, indice) => {
+                foto.classList.remove("principal", "izquierda", "derecha");
+                if (indice === centro) {
+                    foto.classList.add("principal");
+                } else if (indice === izquierda) {
+                    foto.classList.add("izquierda");
+                } else if (indice === derecha) {
+                    foto.classList.add("derecha");
+                }
+            });
+        }
+
+        function rotacionAutomatica() {
+            if (rotarCarrusel !== null) clearInterval(rotarCarrusel);
+            rotarCarrusel = setInterval(() => {
+                centro = (centro + 1) % total;
+                actualizarCarrusel();
+            }, 3000);
+        }
+
+        if(flechaR !== null){
+            flechaR.addEventListener("click", () => {
+                centro = (centro + 1) % total;
+                actualizarCarrusel();
+                rotacionAutomatica();
+            });
+
+            flechaL.addEventListener("click", () => {
+                centro = (centro - 1 + total) % total;
+                actualizarCarrusel();
+                rotacionAutomatica();
+            });
+        }
+
+        actualizarCarrusel();
+        rotacionAutomatica();
     });
 });

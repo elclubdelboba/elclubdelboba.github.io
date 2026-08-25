@@ -12,6 +12,13 @@
     font-style: normal;
 }
 
+.icono {
+    font-family: "Lucida Sans Unicode", "Arial Unicode MS", sans-serif;
+    font-variant-ligatures: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 html{
     scroll-behavior: smooth;
     width: 100%;
@@ -47,6 +54,11 @@ body{
 
 .menu{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .menu.mini{
@@ -219,13 +231,14 @@ body{
 .contenedor{
     width: auto;
     height: auto;
-    background-color: black;
+    max-width: 500px;
     margin-top: 40px;
     border: 10px solid #ffffff;
 }
 
 .majestuoso{
-    border: 10px solid var(--rosado); 
+    border: 10px solid var(--rosado);
+
 }
 
 .bloque{
@@ -243,8 +256,10 @@ body{
     font-size: large;
     width: 100%;
     height: 100px;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     box-shadow: inset 0 -2px 0 0 #ffffff;
 }
 
@@ -259,23 +274,50 @@ body{
     align-content: center;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    position: relative;
     width: 100%;
-    max-height: 500px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.7);
     border-bottom: 2px solid white;
+    overflow: hidden;
 }
 
 .marco.especial{
     border-bottom: 2px solid var(--rosado);
 }
 
-.foto{
-    width: 100%;
-    height: auto;
-    max-width: 500px;
+.flechas{
+    background-color: white;
+    position: absolute;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 50px;
+    font-size: x-large;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
 }
 
-.majestuoso-cabeza{
+.L{
+    left: 0px;
+    border-radius: 0px 30px 30px 0px;
+    padding-right: 10px;
+}
+
+.R{
+    right: 0px;
+    border-radius: 30px 0px 0px 30px;
+    padding-left: 10px;
+}
+
+.majestuoso .cabeza{
     color: #ffffff;
     background-color: var(--rosado);
     box-shadow: inset 0 -2px 0 0 var(--rosado);
@@ -286,6 +328,7 @@ body{
 }
 
 .cuadro {
+    background-color: black;
     display: grid;
     align-content: center;
     align-items: center;
@@ -360,4 +403,44 @@ footer{
     margin-top: 150px;
     color: black;
     background-color: white;
+}
+
+/*------------------------------------------------------*/
+
+.carrusel {
+    position: relative;
+    width: 90%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto {
+    position: absolute;
+    width: 60%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, opacity .2s ease-in-out, z-index 0.1s step-end;
+    opacity: 0;
+    z-index: 0;
+}
+
+.principal {
+    z-index: 2;
+    transform: translateX(0) scale(1);
+    opacity: 1;
+}
+
+.derecha {
+    z-index: 1;
+    transform: translateX(50%) scale(0.8);
+    opacity: 0.8;
+}
+
+.izquierda {
+    z-index: 1;
+    transform: translateX(-50%) scale(0.8);
+    opacity: 0.8;
 }

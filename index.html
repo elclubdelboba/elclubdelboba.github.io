@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>EL CLUB DEL BOBA</title>
+        <link rel="icon" href="assets/elclubdelbobalogo.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -14,12 +15,12 @@
 
         <button class="boton barra" id="boton-barra">☰</button>
 
-        <a class="boton what" id="boton-what" href="https://wa.me/+595982092589?text=¡Hola! Me gustaría comprar">&#x2709;&#xFE0E;</a>
+        <a class="boton what icono" id="boton-what" href="https://wa.me/+595982092589?text=¡Hola! Me gustaría comprar">&#x2709;&#xFE0E;</a>
 
         <div id="barra-lateral" class="barra-lateral">
             <div>
             <h2>MENÚ</h2>
-                <a class="enlace btn-subir" href="#bloque1"><b>CLÁSICOS</b></a>
+                <a class="enlace" id="btnSubir" href="#bloque1"><b>CLÁSICOS</b></a>
                 <a class="enlace" href="#bloque2"><b>PUROS</b></a>
                 <a class="enlace" href="#bloque3"><b>EXÓTICOS</b></a>
                 <a class="enlace especial" href="#bloque4"><b>MAJESTUOSOS</b></a>
@@ -44,11 +45,15 @@
                 <div class = "bloque">
 
                     <span class="cabeza">
-                        <h1>CLÁSICOS <br> <span class="subT"> LOS FAVORITOS DEL CLUB <span> </br> </h1>
+                        <h1>CLÁSICOS </h1>
+                        <h2 class="subT"> LOS FAVORITOS DEL CLUB </h2>
                     </span>
                     
                     <span class="marco">
-                        <img class="foto" src="assets/coffee.png" alt="">
+                        <button class="flechas L icono">&#x25C0;&#xFE0E;</button>
+                        <span id="carrusel" class="carrusel">
+                        </span>
+                        <button class="flechas R icono">&#x25B6;&#xFE0E;</button>
                     </span>
 
                     <span class="cuadro">
@@ -78,11 +83,15 @@
                 <div class = "bloque">
 
                     <span class="cabeza">
-                        <h1>PUROS <br> <span class="subT"> LOS EXQUISITOS DEL CLUB <span> </br> </h1>
+                        <h1>PUROS</h1>
+                        <h2 class="subT"> LOS EXQUISITOS DEL CLUB </h2>
                     </span>
 
                     <span class="marco">
-                        <img class="foto" src="assets/dark.png" alt="">
+                        <!-- <button class="flechas L icono">&#x25C0;&#xFE0E;</button> -->
+                        <span id="carrusel" class="carrusel">
+                        </span>
+                        <!-- <button class="flechas R icono">&#x25B6;&#xFE0E;</button> -->
                     </span>
 
                     <span class="cuadro">
@@ -104,11 +113,15 @@
                 <div class = "bloque">
 
                     <span class="cabeza">
-                        <h1>EXÓTICOS <br> <span class="subT"> LOS DISTINTOS DEL CLUB <span> </br> </h1>
+                        <h1>EXÓTICOS</h1>
+                        <h2 class="subT">LOS DISTINTOS DEL CLUB</h2>
                     </span>
 
                     <span class="marco">
-                        <img class="foto" src="assets/strawberry.png" alt="">
+                        <button class="flechas L icono">&#x25C0;&#xFE0E;</button>
+                        <span id="carrusel" class="carrusel">
+                        </span>
+                        <button class="flechas R icono">&#x25B6;&#xFE0E;</button>
                     </span>
 
                     <span class="cuadro">
@@ -145,12 +158,16 @@
 
                 <div class = "bloque">
 
-                    <span class="cabeza majestuoso-cabeza">
-                        <h1>MAJESTUOSOS <br> <span class="subT"> LOS MÁS LUJOSOS DEL CLUB <span> </br> </h1>
+                    <span class="cabeza">
+                        <h1>MAJESTUOSOS</h1>
+                        <h2 class="subT">LOS MÁS LUJOSOS DEL CLUB</h2>
                     </span>
                     
-                    <span class="marco especial">
-                        <img class="foto" src="assets/brownsugar.png" alt="">
+                    <span class="marco">
+                        <button class="flechas L icono">&#x25C0;&#xFE0E;</button>
+                        <span id="carrusel" class="carrusel">
+                        </span>
+                        <button class="flechas R icono">&#x25B6;&#xFE0E;</button>
                     </span>
 
                     <span class="cuadro majestuoso-cuadro">
@@ -176,12 +193,14 @@
 
                     <div class = "bloque">
 
-                    <span class="cabeza majestuoso-cabeza">
-                        <h1>PINK POP <br> <span class="subT"> EL ORIGINAL DEL CLUB ¡HECHO PARA TODOS! <span> </br> </h1>
+                    <span class="cabeza">
+                        <h1>PINK POP</h1>
+                        <h2 class="subT">EL ORIGINAL DEL CLUB ¡HECHO PARA TODOS!</h2>
                     </span>
 
-                    <span class="marco especial">
-                        <img class="foto" src="assets/pinkpop.png" alt="">
+                    <span class="marco">
+                        <span id="carrusel" class="carrusel">
+                        </span>
                     </span>
 
                     <span class="cuadro majestuoso-cuadro">
