@@ -43,6 +43,7 @@ html::-webkit-scrollbar {
     --rosado:  rgb(255, 100, 200);
     --what:  #25D366;
     --second: #EA63FF;
+    --matcha: #91B500;
   }
 
 body{
@@ -119,6 +120,7 @@ body{
     left: 0;
     width: 50%;
     height: 100%;
+    max-width: 400px;
     background-color:rgb(0, 0, 0);
     border-right: 2px solid white;
     color: white;
@@ -238,7 +240,6 @@ body{
 
 .majestuoso{
     border: 10px solid var(--rosado);
-
 }
 
 .bloque{
@@ -355,6 +356,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: normal;
 }
 
 .best{
@@ -371,26 +373,45 @@ body{
     border-radius: 50px;
 }
 
-.majestuoso-cuadro{
+.majestuosoCuadro{
     background-color: #ffffff;
     color: black;
     border-bottom: 2px solid var(--rosado);
 }
 
-.cuadro .item:nth-child(1){
+.item{
+    display: grid;
+}
+
+.item.name{
     color: var(--rosado);
 }
 
-.item{
-    display: grid;
-    place-items: left;
-}
-
-.item-largo{
+.precio, .precioMajestuoso{
     grid-row: span 2;
+    position: relative;
     display: grid;
     place-items: center;
     justify-items: end;
+}
+
+.soon{
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.soon::before{
+    opacity: 1;
+    content: "PRÓXIMAMENTE";
+    font-size: large;
+    position: relative;
+    color: var(--matcha);
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.precioMajestuoso{
+    color: rgba(0, 0, 0, 0.2);
 }
 
 footer{
@@ -443,4 +464,8 @@ footer{
     z-index: 1;
     transform: translateX(-50%) scale(0.8);
     opacity: 0.8;
+}
+
+.item.name.matcha{
+    color: var(--matcha);
 }
