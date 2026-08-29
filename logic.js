@@ -118,7 +118,9 @@ document.addEventListener("DOMContentLoaded", () => {
             {src: "assets/choco2.png", alt: "Choco Milk 2" }
         ],
         "PUROS": [
-            {src: "assets/dark.png", alt: "Brown Sugar" },
+            {src: "assets/dark.png", alt: "Dark Coffee" },
+            {src: "assets/imperial.png", alt: "Pure Matcha" }
+
         ],
         "EXÓTICOS": [
             {src: "assets/peach.png", alt: "Peach Milk" },
@@ -126,7 +128,9 @@ document.addEventListener("DOMContentLoaded", () => {
         ],
         "MAJESTUOSOS": [
             {src: "assets/brownsugar.png", alt: "Strawberry Milk" },
-            {src: "assets/obsidian.png", alt: "Cookie & Cream" }
+            {src: "assets/obsidian.png", alt: "Cookie & Cream" },
+            {src: "assets/latte1.png", alt: "Matcha Latte" },
+            {src: "assets/latte2.png", alt: "Matcha Latte" }
         ],
         "PINK POP": [
             {src: "assets/pinkpop.png", alt: "Strawberry Milk" }
