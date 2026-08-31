@@ -342,12 +342,21 @@ body{
     border-bottom: 2px solid white;
     height: auto;
     width: auto;
-  }
+}
+
+.sellos{
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 50px;
+    width: auto;
+    top: -5px;
+    right: -5px;
+}
 
 .sello{
-    position: absolute;
-    top: -8px;
-    right: -3px;
+    position: relative;
     width: 50px;
     height: 50px;
     text-align: center;
@@ -357,6 +366,8 @@ body{
     justify-content: center;
     align-items: center;
     font-weight: normal;
+    z-index: 2;
+    margin-left: 5px;
 }
 
 .best{
