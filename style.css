@@ -44,6 +44,7 @@ html::-webkit-scrollbar {
     --what:  #25D366;
     --second: #EA63FF;
     --matcha: #91B500;
+    --deluxe:#61264C;
   }
 
 body{
@@ -479,4 +480,8 @@ footer{
 
 .item.name.matcha{
     color: var(--matcha);
+}
+
+.deluxe{
+  background: linear-gradient(-60deg, #3D1830 0%,var(--deluxe) 25%,#8F3870 40%, #b2458c 50%, #8F3870 60%, var(--deluxe) 75%, #3D1830 100%);
 }
