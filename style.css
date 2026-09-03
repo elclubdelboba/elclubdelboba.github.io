@@ -484,4 +484,5 @@ footer{
 
 .deluxe{
   background: linear-gradient(-60deg, #3D1830 0%,var(--deluxe) 25%,#8F3870 40%, #b2458c 50%, #8F3870 60%, var(--deluxe) 75%, #3D1830 100%);
+  border: 0;
 }
