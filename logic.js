@@ -107,10 +107,8 @@ elementos.forEach(boton => {
 });
 
 //CARRUSEL-----------------------------------------------------------
-
 document.addEventListener("DOMContentLoaded", () => {
-    
-    // 1. Tu base de datos organizada por categorías
+
     const bancoImagenes = {
         "CLÁSICOS": [
             {src: "assets/choco.png", alt: "Choco Milk" },
@@ -137,7 +135,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ]
     };
 
-    // 2. Buscamos todas las secciones de categorías en la página
     const contenedores = document.querySelectorAll(".contenedor");
 
     contenedores.forEach((seccion) => {
@@ -210,5 +207,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         actualizarCarrusel();
         rotacionAutomatica();
+    });
+});
+
+const bloques = document.querySelectorAll(".contenedor");
+
+bloques.forEach(bloques => {
+    bloques.addEventListener('click', (evento) => {
+        if(bloques.classList.contains("close")){
+            bloques.classList.remove("close");
+        }
+        else{
+            bloques.classList.add("close");
+        }
     });
 });
