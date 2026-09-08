@@ -549,3 +549,8 @@ footer{
 .pink{
     border-bottom: 2px solid var(--rosado);
 }
+
+.combo{
+    font-size: medium;
+    font-weight: 300;
+}

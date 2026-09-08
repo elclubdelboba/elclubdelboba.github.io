@@ -132,6 +132,12 @@ document.addEventListener("DOMContentLoaded", () => {
         ],
         "PINK POP": [
             {src: "assets/pinkpop.png", alt: "Strawberry Milk" }
+        ],
+        "Q-SNACKS": [
+            {src: "assets/tartaleta.png", alt: "Tartaletas" },
+            {src: "assets/tartaleta2.png", alt: "Tartaletas" },
+            {src: "assets/ambar.png", alt: "Ámbar Mochis" },
+            {src: "assets/ambar2.png", alt: "Ámbar Mochis" }
         ]
     };
 
