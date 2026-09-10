@@ -8,6 +8,16 @@ var inicio =  true;
 var miniPermitido = true;
 var topp = true;
 
+const divHead =`
+<div class="up">
+    <img id="imgLogo" class="logo" src="/assets/elclubdelbobalogo.png " alt="Logo">
+    <h1>EL ÚNICO BOBA ARTESANAL DEL PAÍS</h1>
+    <p>Hacemos cada perla, una por una, con la receta original nacida en Taiwán sin conservantes, ni quimicos raros.<br>
+    No vendemos bolitas de gelatina industrial, vendemos la verdadera experiencia del Bubble Tea.
+    </p>
+</div>
+<img id="imgBoba" class="bobas carga" src="/assets/boba.png" alt="Bobas">`;
+
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
 }
@@ -27,9 +37,13 @@ document.addEventListener("DOMContentLoaded", function() {
      setTimeout(() => {
         inicio = false;
         document.documentElement.style.overflow = 'auto';
-        head.innerHTML = `<h4 id="text1Logo" class="up">BIENVENIDOS<br>AL CLUB</h4> 
-        <img id="imgLogo" class="logo" src="/assets/elclubdelbobalogo.png " alt="">`
+        head.innerHTML = divHead;
     }, 1300); 
+
+    setTimeout(() => {
+        const imgBoba = document.getElementById("imgBoba");
+        imgBoba.classList.remove("carga");
+    }, 1400); 
 });
 
 document.addEventListener('pointerdown', function(evento) {
@@ -53,14 +67,18 @@ window.addEventListener('scroll', () => {
     if (!miniPermitido) return;
 
     if (window.scrollY === 0) {
-        head.innerHTML = `<h4 id="text1Logo" class="up">BIENVENIDOS<br>AL CLUB</h4>
-        <img id="imgLogo" class="logo" src="/assets/elclubdelbobalogo.png " alt="">`
+        head.innerHTML = divHead;
         logo.classList.remove("mini");
-        imgLogo.classList.remove("mini");
         menu.classList.remove("mini");
         if (inicio === false) {
             topp = true;
         }
+
+        setTimeout(() => {
+            const imgBoba = document.getElementById("imgBoba");
+            imgBoba.classList.remove("carga");
+        }, 100); 
+    
     } else {
         head.innerHTML = `<img id="imgLogo" class="logo" src="/assets/elclubdelbobalogo.png " alt="">`
         logo.classList.add("mini");

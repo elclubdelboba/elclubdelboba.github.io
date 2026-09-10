@@ -21,7 +21,7 @@
 
 html{
     scroll-behavior: smooth;
-    width: 100%;
+    width: 100vw;
     height: auto;
     background-repeat: repeat;
     background-position: center;
@@ -47,7 +47,6 @@ body{
     height: auto;
     margin: 0;
     padding: 0;
-    /*overflow-x: hidden;*/
 }
 
 body::-webkit-scrollbar {
@@ -56,6 +55,7 @@ body::-webkit-scrollbar {
 
 .menu{
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -85,7 +85,6 @@ body::-webkit-scrollbar {
     align-items: center;
     margin: 0;
     z-index: 5;
-    border: 2px solid #ffffff;
     border-radius: 100%;
     cursor: pointer;
 }
@@ -93,12 +92,14 @@ body::-webkit-scrollbar {
 .boton.barra{
     background-color:var(--rosado);
     color: rgb(255, 255, 255);
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     font-size: x-large;
     bottom: 8px;
-    right: 50%;
-    transform: translateX(20px);
+    right: 50vw;
+    border: 2px solid #ffffff;
+    box-sizing: border-box;
+    transform: translateX(25px);
 }
 
 .boton.what{
@@ -124,12 +125,13 @@ body::-webkit-scrollbar {
     color: white;
     transform: translateY(100%);
     z-index: 4;
-    transition: transform 0.3s ease-in-out;
     bottom: 0;
-    padding-bottom: 60px;
+    padding-bottom: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
+    transition: transform 0.2s ease-in-out;
 }
 
 .barra-lateral::before {
@@ -137,13 +139,20 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: -60px;
-    content: "▼";
+    top: -70px;
+    content: "";
     border-top: 2px solid white;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 70px;
     background-color: var(--deluxe);
+    box-sizing: border-box;
+}
+
+.barra-lateral.activo::before {
+    font-size: xx-large;
+    font-weight: bold;
+    content: "MENÚ";
 }
 
 .barra-lateral.activo {
@@ -221,25 +230,27 @@ body::-webkit-scrollbar {
 }
 
 .titulo {
-    font-size: medium;
+    box-sizing: border-box;
     width: 100%;
-    height: 120px;
+    height: 75vh;
+    padding:10px 40px 10px 40px;
     background-color: black;
     color: white;
+    text-align: center;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    align-content: center;
-    padding:10px 0 10px 0;
     position: relative;
     border-bottom: 2px solid white;
-    transition: height .4s cubic-bezier(0.25, 1, 0.5, 1); 
+    overflow: hidden;
+    transition: all .4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .titulo.carga {
     height: 100vh;
+    border-bottom: none;
     z-index: 999;
 }
 
@@ -248,22 +259,73 @@ body::-webkit-scrollbar {
     position: fixed;
     left: 0%;
     top: 0%;
-    height: 40px;
+    height: 70px;
     transition: height .2s cubic-bezier(0.25, 1, 0.5, 1); 
     z-index: 3;
 }
 
-.logo {
-    width: 110px;
+.up{
     height: auto;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    transition: width .4s cubic-bezier(0.25, 1, 0.5, 1);
+    flex-wrap: nowrap;
+    align-items: center;
+    max-width: 500px;
+    z-index: 1;
 }
 
-.logo.carga {
-    width: 50%;
-    height: auto;
+@media (max-width: 768px) {/*MOVIL*/
+    .logo {
+        width: 30vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        transition: width .4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .logo.carga {
+        width: 100%;
+        height: auto;
+    }
+
+    .bobas{
+        position: absolute;
+        width: auto;
+        height: 100%;
+        bottom: 0;
+        opacity: .3;
+        z-index: 0;
+        transition: all .5s ease;
+    }
+
+    .bobas.carga{
+        opacity: .0;
+    }
+}
+
+@media (min-width: 769px) {/*PC*/
+    .logo {
+        width: auto;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        transition: height .4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .logo.carga {
+        width: auto;
+        height: 90vh;
+    }
+
+    .bobas{
+        position: absolute;
+        height: auto;
+        width: 120%;
+        bottom: 0;
+        opacity: .3;
+        z-index: 0;
+    }
 }
 
 .logo.mini{
@@ -271,20 +333,6 @@ body::-webkit-scrollbar {
     height: auto;
     display: block;
     transition: width .2s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.up{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    margin-right: 20px;
-}
-
-.boba{
-    color: white;
 }
 
 .contenedor{
