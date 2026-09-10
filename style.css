@@ -114,6 +114,11 @@ body::-webkit-scrollbar {
     box-sizing: border-box;
 }
 
+.cardImg{
+    position: absolute;
+    width: 100%;
+}
+
 .barraLateral {
     position: fixed;
     width: 100%;
