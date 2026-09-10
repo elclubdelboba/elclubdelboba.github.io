@@ -119,7 +119,7 @@ function validarSello() {
     
     let siguientePerla = bobaStamps + 1;
     
-    if (siguientePerla > 4){
+    if (siguientePerla > 3){
         localStorage.setItem('recuento', 0);
         bobaStamps = 0;
         actualizarInterfazDeCirculos();
