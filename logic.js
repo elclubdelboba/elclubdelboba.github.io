@@ -12,8 +12,10 @@ const divHead =`
 <div class="up">
     <img id="imgLogo" class="logo" src="/assets/elclubdelbobalogo.png " alt="Logo">
     <h1>EL ÚNICO BOBA ARTESANAL DEL PAÍS</h1>
-    <p>Hacemos cada perla, una por una, con la receta original nacida en Taiwán sin conservantes, ni quimicos raros.<br>
-    No vendemos bolitas de gelatina industrial, vendemos la verdadera experiencia del Bubble Tea.
+    <p>Hacemos cada perla, una por una, con la receta original nacida en Taiwán.<br>
+    Sin conservantes, ni quimicos raros.<br>
+    No vendemos bolitas de gelatina industrial.<br>
+    Vendemos la verdadera experiencia del Bubble Tea.
     </p>
 </div>
 <img id="imgBoba" class="bobas carga" src="/assets/boba.png" alt="Bobas">`;
