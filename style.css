@@ -272,7 +272,6 @@ body::-webkit-scrollbar {
     flex-wrap: nowrap;
     align-items: center;
     max-width: 500px;
-    font-weight: bold;
     z-index: 1;
 }
 
@@ -295,7 +294,7 @@ body::-webkit-scrollbar {
         width: auto;
         height: 100%;
         bottom: 0;
-        opacity: .25;
+        opacity: .22;
         z-index: 0;
         transition: all .5s ease;
     }
@@ -320,7 +319,7 @@ body::-webkit-scrollbar {
         height: auto;
         width: 120%;
         bottom: 0;
-        opacity: .25;
+        opacity: .22;
         z-index: 0;
     }
 }
