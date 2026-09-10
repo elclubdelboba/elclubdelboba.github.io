@@ -7,6 +7,7 @@ const flechaL = document.getElementById("flechaL");
 var inicio =  true;
 var miniPermitido = true;
 var topp = true;
+let intro = true;
 
 const divHead =`
 <div class="up">
@@ -20,6 +21,30 @@ const divHead =`
 </div>
 <img id="imgBoba" class="bobas carga" src="/assets/boba.png" alt="Bobas">`;
 
+window.addEventListener('DOMContentLoaded', () => {
+    const parametrosUrl = new URLSearchParams(window.location.search);
+    const tokenAtrapado = parametrosUrl.get('token');
+
+    if (tokenAtrapado == "ok"){
+        intro = false;
+        const logo = document.getElementById("logo");
+        const imgLogo = document.getElementById("imgLogo");
+        imgLogo.classList.remove("carga");
+        logo.classList.remove("carga");
+        head.innerHTML = divHead;
+        setTimeout(() => {
+            const imgBoba = document.getElementById("imgBoba");
+            imgBoba.classList.remove("carga");
+        }, 300); 
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+    else{
+        if (intro === true){
+            cargarIntro();
+        }
+    }
+});
+
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
 }
@@ -27,26 +52,28 @@ if ('scrollRestoration' in history) {
 window.scrollTo(0, 0);
 document.documentElement.style.overflow = 'hidden';
 
-document.addEventListener("DOMContentLoaded", function() {
-    const logo = document.getElementById("logo");
-    const imgLogo = document.getElementById("imgLogo");
+function cargarIntro(){
+        //document.addEventListener("DOMContentLoaded", function() {
+            const logo = document.getElementById("logo");
+            const imgLogo = document.getElementById("imgLogo");
 
-    setTimeout(() => {
-        imgLogo.classList.remove("carga");
-        logo.classList.remove("carga");
-    }, 1000); 
+            setTimeout(() => {
+                imgLogo.classList.remove("carga");
+                logo.classList.remove("carga");
+            }, 1000); 
 
-     setTimeout(() => {
-        inicio = false;
-        document.documentElement.style.overflow = 'auto';
-        head.innerHTML = divHead;
-    }, 1300); 
+            setTimeout(() => {
+                inicio = false;
+                document.documentElement.style.overflow = 'auto';
+                head.innerHTML = divHead;
+            }, 1300); 
 
-    setTimeout(() => {
-        const imgBoba = document.getElementById("imgBoba");
-        imgBoba.classList.remove("carga");
-    }, 1400); 
-});
+            setTimeout(() => {
+                const imgBoba = document.getElementById("imgBoba");
+                imgBoba.classList.remove("carga");
+            }, 1400); 
+       // });
+    }
 
 document.addEventListener('pointerdown', function(evento) {
     if (!barra.contains(evento.target) && !botonBarra.contains(evento.target) && botonBarra.textContent == "×"){

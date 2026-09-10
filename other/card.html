@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EL CLUB DEL BOBA</title>
+    <link rel="icon" href="assets/elclubdelbobalogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+
+    <header class="titulo mini" id="logo">
+        <img id="imgLogo" class="logo mini" src="/assets/elclubdelbobalogo.png " alt="Logo">
+    </header>
+
+    <button class="boton wallet" id="boton-wallet" onclick="location.href='/index.html?token=ok'"">◀</button>
+
+    <!-- <button class="boton barra" id="boton-barra">☰</button> -->
+    <div id="barra-lateral" class="barraLateral">
+    </div>
+
+    <div class="contentCard">
+        <div class="card">
+            <img class="logoCard" src="/assets/elclubdelbobalogo.png" alt="">
+            <img class="logoFondo" src="/assets/logovector.png" alt="">
+            <div class="content">
+                <div></div>
+                <div id="sellos" class="sellos">
+                    <span class="sello"><img class="estampa" src="/assets/elclubdelbobalogo.png" alt=""></span>
+                    <span class="sello"><img class="estampa" src="/assets/elclubdelbobalogo.png" alt=""></span>
+                    <span class="sello"><img class="estampa" src="/assets/elclubdelbobalogo.png" alt=""></span>
+                    <span class="sello"><img class="estampa" src="/assets/elclubdelbobalogo.png" alt=""></span>
+                    <span class="sello"><img class="estampa" src="/assets/elclubdelbobalogo.png" alt=""></span>
+                </div>
+                <div class="userBand">
+                    <h4 id="username">USER#0000</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="inputs">
+            <input id="codigoText" class="input" type="text" placeholder="XXXXXX">
+            <button id="botonCodigo" class="botonInput">OK</button>
+        </div>
+    </div>
+
+    <div class="info">
+        <h1>COMPRA 5... EL 6<br>¡ES GRATIS!</h1>
+        <p>Solo para los miembros más fieles del club.</p>
+    </div>
+
+    <script src="logic.js"></script>
+</body>
+</html>
