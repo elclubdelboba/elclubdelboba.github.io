@@ -31,7 +31,7 @@ function consultarUsuario(user){
             <h2>¡CREA TU TARJETA DE MIEMBRO FIEL DEL CLUB!</h2>
             <div class="inputs user">
             <input id="crearUser" class="input user" type="text" placeholder="CREA TU USUARIO">
-            <button id="botonCrearUser" class="botonInput user">OK</button>
+            <button id="botonCrearUser" class="botonInput user">↪</button>
             </div>
             <h3>¡Con esta tarjeta digital cada bubble que compres se convierten en uno gratis!</h3>
         `;
@@ -119,7 +119,7 @@ function validarSello() {
     
     let siguientePerla = bobaStamps + 1;
     
-    if (siguientePerla > 4) {
+    if (siguientePerla > 4){
         localStorage.setItem('recuento', 0);
         bobaStamps = 0;
         actualizarInterfazDeCirculos();
@@ -130,7 +130,7 @@ function validarSello() {
 
     if (inputToken === tokenCorrectoComputado) {
         bobaStamps = siguientePerla;
-        localStorage.setItem('boba_stamps_count', bobaStamps);
+        localStorage.setItem('recuento', bobaStamps);
         actualizarInterfazDeCirculos();
         inputText.value = "";
     }
@@ -153,12 +153,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
         if (tokenAtrapado.toUpperCase() === tokenCorrectoComputado) {
             bobaStamps = siguientePerla;
-            localStorage.setItem('boba_stamps_count', bobaStamps);
+            localStorage.setItem('recuento', bobaStamps);
             actualizarInterfazDeCirculos();
-        
             window.history.replaceState({}, document.title, window.location.pathname);
-            
-            alert("¡BOOM! Perla inyectada automáticamente via QR. Sello verificado 🔮✨");
+            alert("¡Sello verificado!");
         }
         else{
             alert("El código QR ha expirado o es inválido para tu usuario, listillo.");
