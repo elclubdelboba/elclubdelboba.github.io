@@ -67,7 +67,7 @@ body::-webkit-scrollbar {
     margin-top: 60px;
 }
 
- .seccion {
+.seccion {
     height: 100vh; /* Cada sección ocupa una pantalla */
     scroll-margin-top: 0px; /* Al estar dentro del contenedor ya limitado, se alinea perfecto */
     padding: 20px;
@@ -94,7 +94,7 @@ body::-webkit-scrollbar {
     color: rgb(255, 255, 255);
     height: 50px;
     width: 50px;
-    font-size: x-large;
+    font-size: xx-large;
     bottom: 8px;
     right: 50vw;
     border: 2px solid #ffffff;
