@@ -38,6 +38,7 @@ html{
     --second: #EA63FF;
     --matcha: #91B500;
     --deluxe:#61264C;
+    --metalic: linear-gradient(-60deg, rgb(50, 50, 50) 0%, rgb(100, 100, 100) 25%,rgb(200, 200, 200) 40%, white 50%,rgb(200, 200, 200) 60%, rgb(100, 100, 100) 75%, rgb(50, 50, 50) 100%);
 }
 
 body{
@@ -150,6 +151,12 @@ body{
     z-index: 5;
 }
 
+.icoUndo{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+}
+
 .barraLateral {
     position: fixed;
     width: 100%;
@@ -214,6 +221,15 @@ body{
     transition: width .2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+.card::after{
+    content: "";
+    background-image: var(--metalic);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.23;
+}
+
 .card{
     position: relative;
     display: flex;
@@ -224,6 +240,17 @@ body{
     border-radius: 3mm;
     background-color: var(--deluxe);
     overflow: hidden;
+}
+
+.level{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    margin: 3mm;
+    color: rgba(255, 100, 200, 0.25);
+    writing-mode: vertical-rl;
+    rotate: 180deg;
 }
 
 .content{
@@ -308,6 +335,7 @@ body{
 }
 
 .botonInput{
+    position: relative;
     text-decoration: none;
     background: var(--rosado);
     color: white;
@@ -318,6 +346,15 @@ body{
     padding: 0;
     font-weight: bolder;
     font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icoEnter{
+    position: absolute;
+    height: 60px;
+    width: 60px;
 }
 
 .inputs.user{

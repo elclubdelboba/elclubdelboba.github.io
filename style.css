@@ -114,9 +114,9 @@ body::-webkit-scrollbar {
     box-sizing: border-box;
 }
 
-.cardImg{
+.icoCard{
     position: absolute;
-    width: 100%;
+    width: 40px;
 }
 
 .barraLateral {

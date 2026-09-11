@@ -31,7 +31,9 @@ function consultarUsuario(user){
             <h2>¡CREA TU TARJETA DE MIEMBRO FIEL DEL CLUB!</h2>
             <div class="inputs user">
             <input id="crearUser" class="input user" type="text" placeholder="CREA TU USUARIO">
-            <button id="botonCrearUser" class="botonInput user">↪</button>
+            <button id="botonCrearUser" class="botonInput user">
+                <img class="icoEnter" src="/assets/icoenter.png" alt="Enter">
+            </button>
             </div>
             <h3>¡Con esta tarjeta digital cada bubble que compres se convierten en uno gratis!</h3>
         `;
